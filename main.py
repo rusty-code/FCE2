@@ -15,7 +15,7 @@ def is_path(path : str) -> bool:
         if not word in '01': return False
     return True
 
-def main(path = "./source/files/resource2"):
+def main(path = "./source/files/resource3"):
 
     print()
     # read the data and div ' '
@@ -34,13 +34,13 @@ def main(path = "./source/files/resource2"):
                     tree.append_bypath(data=int(apnd[0]), path=apnd[1])
                 else:
                     print("(ОШИБКА) Некорректые данные:")
-                    print(f"(ОШИБКА) Файл : {path}, строка : {line+1}, число : {apnd[0]}, путь : {apnd[1]}")    
+                    print(f"(ОШИБКА) Файл : {path}, строка : {line}, число : {apnd[0]}, путь : {apnd[1]}")    
             else:
                 print("\n(ОШИБКА) Некорректые данные:")
-                print(f"(ОШИБКА) Файл : {path}, строка : {line+1}, число : {apnd[0]}, путь : {apnd[1]}")
+                print(f"(ОШИБКА) Файл : {path}, строка : {line}, число : {apnd[0]}, путь : {apnd[1]}")
         else: 
             print(f"(ОШИБКА) Отсутвие или несоответсвие данных данных:")
-            print(f"(ОШИБКА) Файл : {path}, строка : {line+1}")
+            print(f"(ОШИБКА) Файл : {path}, строка : {line}")
 
 
     if not tree.verified(tree._head):
